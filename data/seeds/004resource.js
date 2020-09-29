@@ -6,7 +6,7 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('resource').insert([
         {name: 'lots of food', description: 'double usual amount'},
-        {name: 'tu name', description: 'tu des'}
+        {name: 'res- name', description: 'res- des'},
 
       ]);
     });

@@ -11,10 +11,18 @@ router.get('/', (req,res) => {
         res.status(400).send(err)
     )
 })
+router.get('/resource', (req,res) => {
+    db.getRes()
+    .then(proj =>
+        res.status(200).send(proj))
+    .catch(err =>
+        res.status(400).send(err)
+    )
+})
 
 router.post('/', (req,res) => {
-    
-    db.addProject(req.body)
+    const body = req.body
+    db.addProject(body)
     .then(proj =>
         res.status(200).send(proj))
     .catch(err =>
